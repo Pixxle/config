@@ -21,7 +21,6 @@ vim.keymap.set('n', '<leader>o', 'm`o<Esc>``') -- Insert a newline in normal mod
 vim.keymap.set('n', ';', ':')
 vim.keymap.set('n', '<leader>w', '<cmd>:w<CR>')
 
-
 -------------------- COMMANDS ------------------------------
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}' -- disabled in visual mode
 cmd 'autocmd BufWritePre (InsertLeave?) <buffer> lua vim.lsp.buf.formatting_sync(nil,500)'

@@ -13,6 +13,9 @@ require 'paq' {
 
     -- tmux navigation
     { 'christoomey/vim-tmux-navigator' },
+
+    -- Split 
+    { 'declancm/maximize.nvim' }, 
  
     -- completion stuff:
     { 'hrsh7th/cmp-buffer', },
@@ -53,8 +56,16 @@ require 'paq' {
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'nvim-treesitter/nvim-treesitter' },
 
-    -- typescript
+    -- typescript & Javascript & svelte
     { 'jose-elias-alvarez/typescript.nvim' },
+    { 'othree/html5.vim' },
+    { 'pangloss/vim-javascript' },
+    { 'evanleck/vim-svelte' },
+    { 'peitalin/vim-jsx-typescript' },
+    { 'leafgarland/typescript-vim' },
+    { 'maxmellon/vim-jsx-pretty' },
+    { 'styled-components/vim-styled-components' },
+
 
     --c# 
     { 'OmniSharp/omnisharp-vim' },
