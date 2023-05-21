@@ -1,0 +1,11 @@
+# Ignore everything in this folder
+/*
+
+# Files that are not ignored
+!/.gitignore
+!/README.md
+
+# Folders that are not ignored
+!/nvim/
+!/shell/
+!/tmux/
