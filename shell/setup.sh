@@ -53,3 +53,10 @@ install-common-tools() {
 
   cp $PWD/dirignore $HOME/
 }
+
+setup-terms() {
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    echo ". $HOME/.config/shell/load.sh" >> $HOME/.zshrc
+}
+

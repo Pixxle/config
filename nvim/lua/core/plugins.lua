@@ -10,6 +10,9 @@ require 'paq' {
 
     -- Configuration and abstraction layer
     { 'nvim-lua/plenary.nvim' },
+
+    -- tmux navigation
+    { 'christoomey/vim-tmux-navigator' },
  
     -- completion stuff:
     { 'hrsh7th/cmp-buffer', },

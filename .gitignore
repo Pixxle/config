@@ -5,8 +5,9 @@
 !/.gitignore
 !/README.md
 !/LICENSE
+!/tmux/tmux.conf
 
 # Folders that are not ignored
 !/nvim/
 !/shell/
-!/tmux/
+

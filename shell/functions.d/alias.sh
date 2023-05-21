@@ -1,4 +1,3 @@
-alias lg='lazygit'
 alias grep='rg'
 alias cat='bat'
 alias find='fd'
@@ -9,6 +8,7 @@ alias vim='nvim'
 alias pretty='prettier --write "**/*.{ts, tsx, js, jsx}"'
 alias gitls='git log --pretty=format:"%C(green)%h\ %C(yellow)[%ad]%Cred%d\ %Creset%s%Cblue\ [%cn]" --decorate --date=relative'
 alias gitll='git log --pretty=format:"%C(yellow)%h%Cred%d\ %Creset%s%Cblue\ [%cn]" --decorate --numstat'
+alias config='nvim ~/.config/'
 
 function pplog() {
 kubectl logs -nprod --follow $1
