@@ -3,7 +3,7 @@ require 'paq' {
     { 'projekt0n/github-nvim-theme' },
     --{ 'tanvirtin/monokai.nvim' },
  
-    ----  Requirements: CocInstall coc-jedi coc-rust-analyzer coc-tsserver
+    ----  Requirements: CocInstall coc-jedi coc-rust-analyzer coc-tsserver coc-svelte
     { 'neoclide/coc.nvim', branch = 'release' }, 
 
     { 'github/copilot.vim' },
@@ -63,9 +63,10 @@ require 'paq' {
     { 'evanleck/vim-svelte' },
     { 'peitalin/vim-jsx-typescript' },
     { 'leafgarland/typescript-vim' },
-    { 'maxmellon/vim-jsx-pretty' },
     { 'styled-components/vim-styled-components' },
-
+    { 'prisma/vim-prisma' },
+    { 'maxmellon/vim-jsx-pretty' },
+    { 'prettier/vim-prettier' },
 
     --c# 
     { 'OmniSharp/omnisharp-vim' },
