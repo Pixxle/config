@@ -4,6 +4,7 @@
 # Files that are not ignored
 !/.gitignore
 !/README.md
+!/LICENSE
 
 # Folders that are not ignored
 !/nvim/
