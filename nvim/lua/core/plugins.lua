@@ -70,6 +70,9 @@ require 'paq' {
 
     --c# 
     { 'OmniSharp/omnisharp-vim' },
+
+    --Markdown
+    { 'iamcco/markdown-preview.nvim'},
 }
 
 
