@@ -11,11 +11,14 @@ alias gitls='git log --pretty=format:"%C(green)%h\ %C(yellow)[%ad]%Cred%d\ %Cres
 alias gitll='git log --pretty=format:"%C(yellow)%h%Cred%d\ %Creset%s%Cblue\ [%cn]" --decorate --numstat'
 alias config='nvim ~/.config/'
 alias cdconf='cd ~/.config/'
+alias k='kubectl'
+alias kc='kubectl ctx'
+alias kn='kubectl ns'
 
 function pplog() {
-  kubectl logs -nprod --follow $1
+  k logs --follow $1
 }
 
 function ppgrep() {
-  kubectl get pods -nprod | grep $1
+  k get pods | grep $1
 }
