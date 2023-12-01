@@ -16,10 +16,10 @@ alias kc='kubectl ctx'
 alias kn='kubectl ns'
 alias kreboot='k rollout restart deploy'
 
-function pplog() {
+function klog() {
   k logs --follow $1
 }
 
-function ppgrep() {
-  k get pods | grep $1
+function kgrep() {
+  k get $1 | grep $2
 }
