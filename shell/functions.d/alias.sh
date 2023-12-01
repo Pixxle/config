@@ -14,6 +14,7 @@ alias cdconf='cd ~/.config/'
 alias k='kubectl'
 alias kc='kubectl ctx'
 alias kn='kubectl ns'
+alias kreboot='k rollout restart deploy'
 
 function pplog() {
   k logs --follow $1
