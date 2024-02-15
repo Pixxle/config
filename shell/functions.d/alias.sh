@@ -1,7 +1,7 @@
 alias grep='rg'
 alias cat='bat'
 alias find='fd'
-alias ls='exa'
+alias ls='eza'
 alias of='fd --type f --hidden --exclude .git --exclude node_modules | fzf-tmux -p | xargs nvim'
 alias cl='cd $(find . -t directory --ignore-file $HOME/.config/shell/dirignore | fzf)'
 alias vim='nvim'
@@ -15,6 +15,7 @@ alias k='kubectl'
 alias kc='kubectl ctx'
 alias kn='kubectl ns'
 alias kreboot='k rollout restart deploy'
+alias gitclean='git branch --merged | /usr/bin/grep -v \* | xargs git branch -D'
 
 function klog() {
   k logs --follow $1
