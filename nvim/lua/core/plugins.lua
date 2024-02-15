@@ -1,7 +1,6 @@
 require 'paq' {
     -- themes
     { 'projekt0n/github-nvim-theme' },
-    --{ 'tanvirtin/monokai.nvim' },
  
     ----  Requirements: CocInstall coc-jedi coc-rust-analyzer coc-tsserver coc-svelte
     { 'neoclide/coc.nvim', branch = 'release' }, 
@@ -11,9 +10,14 @@ require 'paq' {
     -- Configuration and abstraction layer
     { 'nvim-lua/plenary.nvim' },
 
-    -- Package manager
+    -- LSP Package manager
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
+ 
+    -- LSP:
+    { 'neovim/nvim-lspconfig' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+
 
     -- tmux navigation
     { 'christoomey/vim-tmux-navigator' },
@@ -26,41 +30,27 @@ require 'paq' {
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-cmdline' },
     { 'hrsh7th/nvim-cmp' },
-    { 'L3MON4D3/LuaSnip' },
     { 'saadparwaiz1/cmp_luasnip' },
-
-
-    -- Go: 
-    { 'ray-x/go.nvim' },
-    { 'mfussenegger/nvim-dap' },
-    { 'rcarriga/nvim-dap-ui' },
-    { 'theHamsta/nvim-dap-virtual-text' },
-    { 'ray-x/guihua.lua' },
 
     -- Hop:
     { 'phaazon/hop.nvim' },    
-    
-    -- LSP:
-    { 'neovim/nvim-lspconfig' },
-    { 'hrsh7th/cmp-nvim-lsp' },
-
-    --nvim-tree
-    { 'kyazdani42/nvim-tree.lua' },
-
-    -- web-devicons
-    { 'kyazdani42/nvim-web-devicons' },
-
-    -- rest
-    { 'NTBBloodbath/rest.nvim' },
-
+   
     -- telescope
     { 'nvim-telescope/telescope.nvim' },
 
+    --nvim-tree
+    { 'kyazdani42/nvim-tree.lua' },
+   
     -- tresitter
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'nvim-treesitter/nvim-treesitter' },
 
-    -- typescript & Javascript & svelte & astro
+    { 'kdheepak/lazygit.nvim' },
+
+    -- web-devicons
+    { 'kyazdani42/nvim-web-devicons' },
+
+      -- typescript & Javascript & svelte & astro
     { 'jose-elias-alvarez/typescript.nvim' },
     { 'othree/html5.vim' },
     { 'pangloss/vim-javascript' },
@@ -73,11 +63,18 @@ require 'paq' {
     { 'prettier/vim-prettier' },
     { 'wuelnerdotexe/vim-astro' },
 
-    --c# 
-    { 'OmniSharp/omnisharp-vim' },
+    -- Go: 
+    { 'ray-x/go.nvim' },
+    { 'mfussenegger/nvim-dap' },
+    { 'rcarriga/nvim-dap-ui' },
+    { 'theHamsta/nvim-dap-virtual-text' },
+    { 'ray-x/guihua.lua' },
 
-    --Markdown
-    { 'iamcco/markdown-preview.nvim'},
+    -- rest
+    { 'NTBBloodbath/rest.nvim' },
+
+
+
 }
 
 
