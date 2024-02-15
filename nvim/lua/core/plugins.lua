@@ -11,6 +11,10 @@ require 'paq' {
     -- Configuration and abstraction layer
     { 'nvim-lua/plenary.nvim' },
 
+    -- Package manager
+    { 'williamboman/mason.nvim' },
+    { 'williamboman/mason-lspconfig.nvim' },
+
     -- tmux navigation
     { 'christoomey/vim-tmux-navigator' },
 
