@@ -70,6 +70,8 @@ require 'paq' {
     { 'theHamsta/nvim-dap-virtual-text' },
     { 'ray-x/guihua.lua' },
 
+    -- Elixir
+    { "elixir-tools/elixir-tools.nvim" },
     -- rest
     { 'NTBBloodbath/rest.nvim' },
 

@@ -35,7 +35,7 @@ end
  
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'svelte', 'tsserver', 'astro', 'tailwindcss', 'terraformls', 'tflint' }
+local servers = { 'svelte', 'tsserver', 'astro', 'tailwindcss', 'terraformls', 'tflint', 'elixirls' }
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
  
 -- Load LSP servers
@@ -56,6 +56,15 @@ lspconfig.astro.setup({
             tsdk = vim.fs.normalize('~/Library/pnpm/global/5/node_modules/typescript/lib')
         }
     },
+})
+
+lspconfig.elixirls.setup({
+    cmd = { "elixir-ls" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+        debounce_text_changes = 150,
+    }
 })
 
 vim.keymap.set('n', '<leader>f', [[<cmd>lua vim.lsp.buf.format({async = true})<CR>]], { silent = true })

@@ -1,6 +1,6 @@
 local tsconfig = require 'nvim-treesitter.configs'
 tsconfig.setup {
-    ensure_installed = { 'bash', 'cmake', 'dockerfile', 'go', 'gomod', 'hcl', 'http', 'json', 'python', 'yaml' },
+    ensure_installed = { 'bash', 'cmake', 'dockerfile', 'go', 'gomod', 'hcl', 'http', 'json', 'python', 'yaml', 'astro', 'elixir', 'heex', 'eex'},
     highlight = { enable = true }
 }
 
