@@ -60,7 +60,7 @@ require 'paq' {
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'nvim-treesitter/nvim-treesitter' },
 
-    -- typescript & Javascript & svelte
+    -- typescript & Javascript & svelte & astro
     { 'jose-elias-alvarez/typescript.nvim' },
     { 'othree/html5.vim' },
     { 'pangloss/vim-javascript' },
@@ -71,6 +71,7 @@ require 'paq' {
     { 'prisma/vim-prisma' },
     { 'maxmellon/vim-jsx-pretty' },
     { 'prettier/vim-prettier' },
+    { 'wuelnerdotexe/vim-astro' },
 
     --c# 
     { 'OmniSharp/omnisharp-vim' },
