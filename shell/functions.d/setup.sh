@@ -27,7 +27,7 @@ done
 # Extend this to not only use brew but detect package manager available
 # This should configure neovim itself and link dotfiles etc automatically also
 install-common-tools() {
-  declare -a DefaultPackages=("jq" "python" "go" "hashicorp/tap/terraform" "git" "fzf" "fd" "tmux" "neovim" "zsh" "ripgrep" "bat" "eza" "planetscale/tap/pscale" "homebrew/cask-fonts" "iterm2" "htop", "kubectl")
+  declare -a DefaultPackages=("jq" "python" "go" "hashicorp/tap/terraform" "git" "fzf" "fd" "tmux" "neovim" "zsh" "ripgrep" "bat" "eza" "homebrew/cask-fonts" "iterm2" "htop" "kubectl" "nvm")
 
   if ! command -v brew > /dev/null; then
     echo "Cannot find homebrew, installing..."
@@ -58,6 +58,11 @@ setup-terms() {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     echo ". $HOME/.config/shell/load.sh" >> $HOME/.zshrc
+}
+
+setup-vim(){
+    git clone --depth=1 https://github.com/savq/paq-nvim.git \
+    "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/paq-nvim
 }
 
 setup-kubectx() {
