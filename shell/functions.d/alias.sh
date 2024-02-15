@@ -12,7 +12,7 @@ alias kc='kubectl ctx'
 alias kn='kubectl ns'
 alias kreboot='k rollout restart deploy'
 
-alias of='fd --type f --hidden --exclude .git --exclude node_modules | fzf-tmux -p | xargs nvim'
+alias vl='fd --type f --hidden --exclude .git --exclude node_modules | fzf-tmux -p | xargs nvim'
 alias cl='cd $(find . -t directory --ignore-file $HOME/.config/shell/dirignore | fzf)'
 
 alias gitll='git log --pretty=format:"%C(yellow)%h%Cred%d\ %Creset%s%Cblue\ [%cn]" --decorate --numstat'
