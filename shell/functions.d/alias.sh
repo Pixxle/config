@@ -1,7 +1,8 @@
 alias grep='rg'
 alias cat='bat'
 alias find='fd'
-alias ls='eza'
+alias l='eza'
+alias ls='eza -la'
 
 alias vim='nvim'
 alias v='nvim'
