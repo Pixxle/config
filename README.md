@@ -9,7 +9,7 @@ source $HOME/.config/shell/load.sh
 setup-terms
 install-common-tools
 
-:CocInstall coc-go
+:CocInstall coc-go coc-prettier coc-svelte coc-jedi
 :CocInstall 
 :call mkdp#util#install()
 ```
