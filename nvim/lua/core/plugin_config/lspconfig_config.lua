@@ -35,7 +35,7 @@ end
  
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'bashls', 'dockerls', 'gopls', 'lua_ls', 'pyright', 'terraformls', 'svelte', 'tsserver'}
+local servers = { 'svelte', 'tsserver', 'astro', 'tailwindcss' }
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
  
 for _, lsp in ipairs(servers) do
@@ -47,5 +47,14 @@ for _, lsp in ipairs(servers) do
         }
     }
 end
+
+-- Astro LSP setup with typescript server
+lspconfig.astro.setup({
+    init_options = {
+        typescript = {
+            tsdk = vim.fs.normalize('~/Library/pnpm/global/5/node_modules/typescript/lib')
+        }
+    },
+})
 
 vim.keymap.set('n', '<leader>f', [[<cmd>lua vim.lsp.buf.format({async = true})<CR>]], { silent = true })
