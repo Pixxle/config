@@ -22,6 +22,4 @@ vim.keymap.set('n', ';', ':')
 vim.keymap.set('n', '<leader>w', '<cmd>:w<CR>')
 vim.keymap.set('n', '<leader>q', '<cmd>:q<CR>')
 
--------------------- COMMANDS ------------------------------
-cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}' -- disabled in visual mode
-cmd 'autocmd BufWritePre (InsertLeave?) <buffer> lua vim.lsp.buf.format(nil,500)'
+
