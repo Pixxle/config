@@ -2,7 +2,6 @@ local tsconfig = require 'nvim-treesitter.configs'
 tsconfig.setup {
     ensure_installed = { 
         'bash', 
-        'cmake', 
         'dockerfile', 
         'go', 
         'gomod', 
