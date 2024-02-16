@@ -1,3 +1,5 @@
+alias cd='z'
+
 alias grep='rg'
 alias cat='bat'
 alias find='fd'
@@ -22,3 +24,6 @@ alias gitclean='git branch --merged | /usr/bin/grep -v \* | xargs git branch -D'
 alias lg='lazygit'
 
 alias pretty='prettier --write "**/*.{ts, tsx, js, jsx}"'
+
+
+eval "$(zoxide init zsh)"
