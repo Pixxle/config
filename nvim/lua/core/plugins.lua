@@ -72,8 +72,12 @@ require 'paq' {
 
     -- Elixir
     { "elixir-tools/elixir-tools.nvim" },
+    
     -- rest
     { 'NTBBloodbath/rest.nvim' },
+
+    -- Python
+    { 'davidhalter/jedi-vim' },
 
 
 
