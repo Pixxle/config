@@ -13,6 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Load the rest of the configuration
 require('core')
 require('core.plugin_config')
 require('impl.tsconfig')

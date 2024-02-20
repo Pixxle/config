@@ -38,7 +38,7 @@ require("lazy").setup({
     -- telescope
     { 'nvim-telescope/telescope.nvim' },
 
-    --nvim-tree
+    --neo-tree
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -57,7 +57,7 @@ require("lazy").setup({
     { 'kdheepak/lazygit.nvim' },
 
     -- web-devicons
-    { 'kyazdani42/nvim-web-devicons' },
+    --{ 'kyazdani42/nvim-web-devicons' },
 
       -- typescript & Javascript & svelte & astro
     { 'jose-elias-alvarez/typescript.nvim' },
@@ -87,4 +87,7 @@ require("lazy").setup({
 
     -- Python
     { 'davidhalter/jedi-vim' },
+
+    -- Lua 
+    { "folke/neodev.nvim", opts = {} },
 })
