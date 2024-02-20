@@ -23,6 +23,7 @@ vim.keymap.set('n', '<leader>o', 'm`o<Esc>``') -- Insert a newline in normal mod
 vim.keymap.set('n', ';', ':')
 vim.keymap.set('n', '<leader>w', '<cmd>:w<CR>')
 vim.keymap.set('n', '<leader>q', '<cmd>:q<CR>')
+vim.keymap.set('n', '<leader>Q', '<cmd>:q!<CR>')
 
 -- Tab navigation
 vim.keymap.set('n', '<leader>t', '<cmd>:tabnew<CR>')
