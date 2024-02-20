@@ -1,5 +1,4 @@
-local tsconfig = require 'nvim-treesitter.configs'
-tsconfig.setup {
+require('nvim-treesitter.configs').setup({
     ensure_installed = { 
         'bash', 
         'dockerfile', 
@@ -15,7 +14,8 @@ tsconfig.setup {
         'heex', 
         'eex'},
     highlight = { enable = true }
-}
+
+})
 
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true})
