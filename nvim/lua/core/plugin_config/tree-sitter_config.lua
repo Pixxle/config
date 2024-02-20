@@ -12,7 +12,8 @@ require('nvim-treesitter.configs').setup({
         'astro', 
         'elixir', 
         'heex', 
-        'eex'},
+        'eex',
+    },
     highlight = { enable = true }
 
 })

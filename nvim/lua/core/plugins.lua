@@ -2,9 +2,6 @@ require("lazy").setup({
     -- themes
     { 'projekt0n/github-nvim-theme' },
  
-    ----  Requirements: CocInstall coc-jedi coc-rust-analyzer coc-tsserver coc-svelte
-    { 'neoclide/coc.nvim', branch = 'release' }, 
-
     { 'github/copilot.vim' },
 
     -- Configuration and abstraction layer
