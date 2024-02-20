@@ -19,9 +19,24 @@ vim.keymap.set('i', '<CR>', 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true
 vim.keymap.set('n', '<C-l>', '<cmd>noh<CR>') -- Clear highlights
 vim.keymap.set('n', '<leader>o', 'm`o<Esc>``') -- Insert a newline in normal mode
  
+-- Save and quit
 vim.keymap.set('n', ';', ':')
 vim.keymap.set('n', '<leader>w', '<cmd>:w<CR>')
 vim.keymap.set('n', '<leader>q', '<cmd>:q<CR>')
+
+-- Tab navigation
+vim.keymap.set('n', '<leader>t', '<cmd>:tabnew<CR>')
+vim.keymap.set('n', '<leader>tn', '<cmd>:tabnext<CR>')
+vim.keymap.set('n', '<leader>tp', '<cmd>:tabprevious<CR>')
+vim.keymap.set('n', '<leader>tc', '<cmd>:tabclose<CR>')
+vim.keymap.set('n', '<leader>te', '<cmd>:tabedit<CR>')
+vim.keymap.set('n', '<leader>ts', '<cmd>:tab split<CR>')
+vim.keymap.set('n', '<leader>1', '1gt')
+vim.keymap.set('n', '<leader>2', '2gt')
+vim.keymap.set('n', '<leader>3', '3gt')
+vim.keymap.set('n', '<leader>4', '4gt')
+vim.keymap.set('n', '<leader>5', '5gt')
+vim.keymap.set('n', '<leader>6', '6gt')
 
 g.copilot_no_tab_map = true
 g.copilot_assume_mapped = true
