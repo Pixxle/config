@@ -25,5 +25,7 @@ alias lg='lazygit'
 
 alias pretty='prettier --write "**/*.{ts, tsx, js, jsx}"'
 
+alias tree='erd'
+
 
 eval "$(zoxide init zsh)"
