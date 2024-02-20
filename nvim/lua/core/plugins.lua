@@ -1,4 +1,4 @@
-require 'paq' {
+require("lazy").setup({
     -- themes
     { 'projekt0n/github-nvim-theme' },
  
@@ -78,9 +78,4 @@ require 'paq' {
 
     -- Python
     { 'davidhalter/jedi-vim' },
-
-
-
-}
-
-
+})
