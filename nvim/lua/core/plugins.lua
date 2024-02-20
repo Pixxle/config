@@ -53,9 +53,6 @@ require("lazy").setup({
 
     { 'kdheepak/lazygit.nvim' },
 
-    -- web-devicons
-    --{ 'kyazdani42/nvim-web-devicons' },
-
       -- typescript & Javascript & svelte & astro
     { 'jose-elias-alvarez/typescript.nvim' },
     { 'othree/html5.vim' },
