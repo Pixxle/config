@@ -13,6 +13,7 @@ require('nvim-treesitter.configs').setup({
         'elixir', 
         'heex', 
         'eex',
+        'lua'
     },
     highlight = { enable = true }
 
