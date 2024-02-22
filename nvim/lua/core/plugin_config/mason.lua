@@ -14,6 +14,7 @@ require('mason-lspconfig').setup({
         'elixirls',
         'jedi_language_server',
         'rust_analyzer',
+        'gopls',
     },
     automatic_installation = true,
     handlers = {

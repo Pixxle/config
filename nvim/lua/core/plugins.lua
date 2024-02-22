@@ -53,35 +53,4 @@ require("lazy").setup({
 
     { 'kdheepak/lazygit.nvim' },
 
-      -- typescript & Javascript & svelte & astro
-    { 'jose-elias-alvarez/typescript.nvim' },
-    { 'othree/html5.vim' },
-    { 'pangloss/vim-javascript' },
-    { 'evanleck/vim-svelte' },
-    { 'peitalin/vim-jsx-typescript' },
-    { 'leafgarland/typescript-vim' },
-    { 'styled-components/vim-styled-components' },
-    { 'prisma/vim-prisma' },
-    { 'maxmellon/vim-jsx-pretty' },
-    { 'prettier/vim-prettier' },
-    { 'wuelnerdotexe/vim-astro' },
-
-    -- Go: 
-    { 'ray-x/go.nvim' },
-    { 'mfussenegger/nvim-dap' },
-    { 'rcarriga/nvim-dap-ui' },
-    { 'theHamsta/nvim-dap-virtual-text' },
-    { 'ray-x/guihua.lua' },
-
-    -- Elixir
-    { "elixir-tools/elixir-tools.nvim" },
-    
-    -- rest
-    { 'NTBBloodbath/rest.nvim' },
-
-    -- Python
-    { 'davidhalter/jedi-vim' },
-
-    -- Lua 
-    { "folke/neodev.nvim", opts = {} },
 })

@@ -13,9 +13,13 @@ require('nvim-treesitter.configs').setup({
         'elixir', 
         'heex', 
         'eex',
-        'lua'
+        'lua',
+        'typescript',
+        'svelte'
     },
-    highlight = { enable = true }
+    highlight = { enable = true },
+    indent = { enable = true },
+    
 
 })
 
