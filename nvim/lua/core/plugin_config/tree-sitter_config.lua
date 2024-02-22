@@ -1,4 +1,5 @@
 require('nvim-treesitter.configs').setup({
+    build = ":TSUpdate",
     ensure_installed = { 
         'bash', 
         'dockerfile', 
@@ -19,7 +20,15 @@ require('nvim-treesitter.configs').setup({
     },
     highlight = { enable = true },
     indent = { enable = true },
-    
+    incremental_selection = {
+        enable = true,
+        keymaps = {
+            init_selection = "<C-b>",
+            node_incremental = "<C-b>",
+            scope_incremental = false,
+            node_decremental = "<bs>",
+        },
+    }, 
 
 })
 
