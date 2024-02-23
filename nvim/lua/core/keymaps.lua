@@ -43,3 +43,12 @@ g.copilot_no_tab_map = true
 g.copilot_assume_mapped = true
 
 
+--- LSP Configuration
+vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true})
+
+vim.api.nvim_set_keymap('n', '<leader>rn', [[<cmd>lua vim.lsp.buf.rename()<CR>]], { silent = true })
+
+vim.api.nvim_set_keymap('n', '<leader>ca', [[<cmd>lua vim.lsp.buf.code_action()<CR>]], { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>h', [[<cmd>lua vim.lsp.buf.hover()<CR>]], { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>gi', [[<cmd>lua vim.lsp.buf.implementation()<CR>]], { silent = true })

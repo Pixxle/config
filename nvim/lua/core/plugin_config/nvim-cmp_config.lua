@@ -18,9 +18,6 @@ cmp.setup({
     experimental = {
         ghost_text = false,
     },
-    completion = {
-        autocomplete = false,
-    },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' },

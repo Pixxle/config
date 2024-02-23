@@ -1,3 +1,4 @@
+require('core.plugin_config.lsp_zero')
 require('core.plugin_config.mason')
 require('core.plugin_config.hop_config')
 require('core.plugin_config.nvim-cmp_config')
