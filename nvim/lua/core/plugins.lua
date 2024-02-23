@@ -1,7 +1,16 @@
 require("lazy").setup({
     -- themes
-    { 'projekt0n/github-nvim-theme' },
- 
+    { 'nyoom-engineering/oxocarbon.nvim' },
+
+    -- statusline
+    { 
+        'hoob3rt/lualine.nvim',
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"
+        }
+    },
+
+    -- Copilot
     { 'github/copilot.vim' },
 
     -- Configuration and abstraction layer
@@ -52,6 +61,8 @@ require("lazy").setup({
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'nvim-treesitter/nvim-treesitter' },
 
+    -- github
     { 'kdheepak/lazygit.nvim' },
+    { 'f-person/git-blame.nvim' },
 
 })

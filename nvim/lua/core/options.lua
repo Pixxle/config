@@ -7,9 +7,8 @@ local fmt = string.format
 
  
 -------------------- OPTIONS -------------------------------
---cmd 'colorscheme monokai' -- Put your favorite colorscheme here
-cmd 'colorscheme github_dark'
---opt.background = 'dark'
+opt.background = 'dark'
+cmd 'colorscheme oxocarbon'
 opt.completeopt = { 'menuone', 'noinsert', 'noselect' } -- Completion options
 opt.cursorline = true
 opt.expandtab = true -- Use spaces instead of tabs
