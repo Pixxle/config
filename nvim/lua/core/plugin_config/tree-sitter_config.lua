@@ -16,15 +16,16 @@ require('nvim-treesitter.configs').setup({
         'eex',
         'lua',
         'typescript',
-        'svelte'
+        'svelte',
+        'tsx',
     },
     highlight = { enable = true },
     indent = { enable = true },
     incremental_selection = {
         enable = true,
         keymaps = {
-            init_selection = "<C-b>",
-            node_incremental = "<C-b>",
+            init_selection = "<C-v>",
+            node_incremental = "<C-v>",
             scope_incremental = false,
             node_decremental = "<bs>",
         },
