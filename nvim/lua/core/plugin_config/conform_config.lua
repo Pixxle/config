@@ -6,6 +6,7 @@ require("conform").setup({
 		-- Use a sub-list to run only the first available formatter
 		javascript = { "prettier" },
 		go = { "gofmt", "goimports" },
+		bash = { "shfmt" },
 	},
 	format_on_save = {
 		timeout_ms = 500,
