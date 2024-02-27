@@ -5,11 +5,10 @@ local g = vim.g -- a table to access global variables
 local opt = vim.opt -- to set options
 local fmt = string.format
 
- 
 -------------------- OPTIONS -------------------------------
-opt.background = 'dark'
-cmd 'colorscheme oxocarbon'
-opt.completeopt = { 'menuone', 'noinsert', 'noselect' } -- Completion options
+opt.background = "dark"
+cmd("colorscheme oxocarbon")
+opt.completeopt = { "menuone", "noinsert", "noselect" } -- Completion options
 opt.cursorline = true
 opt.expandtab = true -- Use spaces instead of tabs
 opt.hidden = true -- Enable background buffers
@@ -28,6 +27,6 @@ opt.splitbelow = true -- Put new windows below current
 opt.splitright = true -- Put new windows right of current
 opt.tabstop = 4 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
-opt.wildmode = { 'list', 'longest' } -- Command-line completion mode
+opt.wildmode = { "list", "longest" } -- Command-line completion mode
 opt.wrap = false -- Disable line wrap
 opt.swapfile = false -- No swapfile

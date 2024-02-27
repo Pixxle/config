@@ -24,7 +24,7 @@ require("lazy").setup({
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'VonHeikemen/lsp-zero.nvim' },
-
+    { 'stevearc/conform.nvim' },
 
     -- tmux navigation
     { 'christoomey/vim-tmux-navigator' },

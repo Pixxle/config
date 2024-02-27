@@ -1,3 +1,3 @@
-require('gitblame').setup{
-    enabled = true,
-}
+require("gitblame").setup({
+	enabled = true,
+})
