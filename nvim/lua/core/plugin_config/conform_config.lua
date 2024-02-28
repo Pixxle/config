@@ -7,6 +7,7 @@ require("conform").setup({
 		javascript = { "prettier" },
 		go = { "gofmt", "goimports" },
 		bash = { "shfmt" },
+		["*"] = { "codespell" },
 	},
 	format_on_save = {
 		timeout_ms = 500,

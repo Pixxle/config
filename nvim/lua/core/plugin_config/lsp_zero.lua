@@ -1,4 +1,8 @@
 local lsp_zero = require("lsp-zero")
 lsp_zero.preset("recommended")
 lsp_zero.extend_cmp()
+lsp_zero.on_attach(function(client, bufnr)
+	lsp_zero.default_keymaps({ buffer = bufnr })
+	vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { buffer = bufnr })
+end)
 lsp_zero.setup()
