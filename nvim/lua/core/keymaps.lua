@@ -12,9 +12,9 @@ vim.keymap.set("i", "<C-u>", "<C-g>u<C-u>") -- Make <C-u> undo-friendly
 vim.keymap.set("i", "<C-w>", "<C-g>u<C-w>") -- Make <C-w> undo-friendly
 
 -- <Tab> to navigate the completion menu
-vim.keymap.set("i", "<Tab>", 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { expr = true })
-vim.keymap.set("i", "<S-Tab>", 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', { expr = true })
-vim.keymap.set("i", "<CR>", 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true })
+--vim.keymap.set("i", "<Tab>", 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { expr = true })
+--vim.keymap.set("i", "<S-Tab>", 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', { expr = true })
+--vim.keymap.set("i", "<CR>", 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true })
 
 vim.keymap.set("n", "<C-l>", "<cmd>noh<CR>") -- Clear highlights
 vim.keymap.set("n", "<leader>o", "m`o<Esc>``") -- Insert a newline in normal mode
