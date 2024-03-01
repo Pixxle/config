@@ -267,7 +267,7 @@ require("neo-tree").setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>fe", function()
+vim.keymap.set("n", "<leader>-", function()
 	local reveal_file = vim.fn.expand("%:p")
 	if reveal_file == "" then
 		reveal_file = vim.fn.getcwd()

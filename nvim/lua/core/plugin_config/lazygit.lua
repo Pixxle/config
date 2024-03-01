@@ -1,2 +1,2 @@
 require("lazygit")
-vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>")
+vim.keymap.set("n", "<leader>g", "<cmd>LazyGit<cr>")

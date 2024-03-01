@@ -1,4 +1,4 @@
 require("hop").setup()
-vim.keymap.set("n", "<leader>fw", "<cmd>HopWord<CR>")
-vim.keymap.set("n", "<leader>fc", "<cmd>HopChar1<CR>")
-vim.keymap.set("n", "<leader>fp", "<cmd>HopPattern<CR>")
+vim.keymap.set("n", "<leader>f", "<cmd>HopWord<CR>")
+vim.keymap.set("n", "<leader>y", "<cmd>HopChar1<CR>")
+--vim.keymap.set("n", "<leader>fp", "<cmd>HopPattern<CR>")
