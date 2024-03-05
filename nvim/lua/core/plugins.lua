@@ -41,6 +41,7 @@ require("lazy").setup({
 
 	-- Hop:
 	{ "phaazon/hop.nvim" },
+	{ "tomasky/bookmarks.nvim" },
 
 	-- telescope
 	{ "nvim-telescope/telescope.nvim" },
