@@ -9,6 +9,7 @@ require("conform").setup({
 		typescriptreact = { "prettier" },
 		go = { "gofmt", "goimports" },
 		bash = { "shfmt" },
+		rust = { "rustfmt" },
 		["*"] = { "codespell" },
 	},
 	format_on_save = {
