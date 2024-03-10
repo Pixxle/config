@@ -40,7 +40,7 @@ require("lazy").setup({
 	{ "saadparwaiz1/cmp_luasnip" },
 
 	-- Hop:
-	{ "phaazon/hop.nvim" },
+	{ "smoka7/hop.nvim" },
 	{ "tomasky/bookmarks.nvim" },
 
 	-- telescope
