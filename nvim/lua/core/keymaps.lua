@@ -11,11 +11,6 @@ vim.keymap.set("n", "Y", "y$") -- copy till end of line
 vim.keymap.set("i", "<C-u>", "<C-g>u<C-u>") -- Make <C-u> undo-friendly
 vim.keymap.set("i", "<C-w>", "<C-g>u<C-w>") -- Make <C-w> undo-friendly
 
--- <Tab> to navigate the completion menu
---vim.keymap.set("i", "<Tab>", 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { expr = true })
---vim.keymap.set("i", "<S-Tab>", 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', { expr = true })
---vim.keymap.set("i", "<CR>", 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true })
-
 vim.keymap.set("n", "<C-l>", "<cmd>noh<CR>") -- Clear highlights
 vim.keymap.set("n", "<leader>o", "m`o<Esc>``") -- Insert a newline in normal mode
 
@@ -41,13 +36,3 @@ vim.keymap.set("n", "<leader>6", "6gt")
 
 g.copilot_no_tab_map = true
 g.copilot_assume_mapped = true
-
---- LSP Configuration
---vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
---vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
-
---vim.api.nvim_set_keymap("n", "<leader>rn", [[<cmd>lua vim.lsp.buf.rename()<CR>]], { silent = true })
-
---vim.api.nvim_set_keymap("n", "<leader>ca", [[<cmd>lua vim.lsp.buf.code_action()<CR>]], { silent = true })
---vim.api.nvim_set_keymap("n", "<leader>h", [[<cmd>lua vim.lsp.buf.hover()<CR>]], { silent = true })
---vim.api.nvim_set_keymap("n", "<leader>gi", [[<cmd>lua vim.lsp.buf.implementation()<CR>]], { silent = true })
