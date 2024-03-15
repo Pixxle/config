@@ -27,5 +27,6 @@ alias pretty='prettier --write "**/*.{ts, tsx, js, jsx}"'
 
 alias tree='erd'
 
+alias chrome-debug='sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
 
 eval "$(zoxide init zsh)"

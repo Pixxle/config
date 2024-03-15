@@ -89,4 +89,8 @@ require("lazy").setup({
 	-- github
 	{ "kdheepak/lazygit.nvim" },
 	{ "f-person/git-blame.nvim" },
+
+	-- Debugging
+	{ "mfussenegger/nvim-dap" },
+	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 })
