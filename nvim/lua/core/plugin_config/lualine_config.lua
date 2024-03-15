@@ -153,6 +153,13 @@ ins_left({
 })
 
 ins_left({
+	"harpoon2",
+	indicators = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+	active_indicators = { "[1]", "[2]", "[3]", "[4]", "[5]", "[6]", "[7]", "[8]", "[9]" },
+})
+
+--[[
+ins_left({
 	-- Lsp server name .
 	function()
 		local msg = "No Active Lsp"
@@ -172,6 +179,7 @@ ins_left({
 	icon = " LSP:",
 	color = { fg = "#ffffff", gui = "bold" },
 })
+--]]
 
 -- Add components to right sections
 ins_right({
