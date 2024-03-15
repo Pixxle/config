@@ -11,6 +11,10 @@ vim.keymap.set("n", "Y", "y$") -- copy till end of line
 vim.keymap.set("i", "<C-u>", "<C-g>u<C-u>") -- Make <C-u> undo-friendly
 vim.keymap.set("i", "<C-w>", "<C-g>u<C-w>") -- Make <C-w> undo-friendly
 
+-- Move selected line / block of text in visual mode
+vim.keymap.set("x", "K", ":m -2<CR>")
+vim.keymap.set("x", "J", ":m+<CR>")
+
 vim.keymap.set("n", "<C-l>", "<cmd>noh<CR>") -- Clear highlights
 vim.keymap.set("n", "<leader>o", "m`o<Esc>``") -- Insert a newline in normal mode
 
