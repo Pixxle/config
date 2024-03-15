@@ -26,4 +26,3 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>s", [[<cmd>lua require('telescope.builtin').grep_string()<CR>]], { silent = true }) -- grep in current buffer
 vim.keymap.set("n", "<leader>a", [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], { silent = true }) -- grep in all files
 vim.keymap.set("n", "<leader>?", [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], { silent = true }) -- search in old files
-vim.keymap.set("n", "ml", [[<cmd>lua require('telescope').extensions.bookmarks.list()<CR>]], { silent = true }) -- list bookmarks

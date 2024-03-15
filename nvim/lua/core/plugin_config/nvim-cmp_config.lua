@@ -10,7 +10,6 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-e>"] = cmp.mapping.abort(),
 		["<C-g>"] = cmp.mapping(function(fallback)
 			vim.api.nvim_feedkeys(
 				vim.fn["copilot#Accept"](vim.api.nvim_replace_termcodes("<Tab>", true, true, true)),

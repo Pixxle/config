@@ -42,6 +42,11 @@ require("lazy").setup({
 	-- Hop:
 	{ "smoka7/hop.nvim" },
 	{ "tomasky/bookmarks.nvim" },
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 
 	-- telescope
 	{ "nvim-telescope/telescope.nvim" },
