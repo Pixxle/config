@@ -7,7 +7,7 @@ local fmt = string.format
 
 -------------------- OPTIONS -------------------------------
 opt.background = "dark"
-cmd("colorscheme oxocarbon")
+vim.cmd("colorscheme github_dark_default")
 opt.completeopt = { "menuone", "noinsert", "noselect" } -- Completion options
 opt.cursorline = true
 opt.expandtab = true -- Use spaces instead of tabs
