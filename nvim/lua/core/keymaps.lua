@@ -6,7 +6,7 @@ vim.keymap.set("", "<Space>", "<Nop>", { silent = true })
 g.mapleader = " "
 g.maplocalleader = " "
 
-vim.keymap.set("", "<leader>c", '"+y') -- Copy to clipboard in normal, visual, select and operator modes
+vim.keymap.set("", "<leader>C", '"+y') -- Copy to clipboard in normal, visual, select and operator modes
 vim.keymap.set("n", "Y", "y$") -- copy till end of line
 vim.keymap.set("i", "<C-u>", "<C-g>u<C-u>") -- Make <C-u> undo-friendly
 vim.keymap.set("i", "<C-w>", "<C-g>u<C-w>") -- Make <C-w> undo-friendly

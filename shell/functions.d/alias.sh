@@ -20,12 +20,14 @@ alias cl='cd $(find . -t directory --ignore-file $HOME/.config/shell/dirignore |
 
 alias gitll='git log --pretty=format:"%C(yellow)%h%Cred%d\ %Creset%s%Cblue\ [%cn]" --decorate --numstat'
 alias gitls='git log --pretty=format:"%C(green)%h\ %C(yellow)[%ad]%Cred%d\ %Creset%s%Cblue\ [%cn]" --decorate --date=relative'
+alias gfz='git branch -a | fzf | xargs git checkout'
 alias gitclean='git branch --merged | /usr/bin/grep -v \* | xargs git branch -D'
 alias lg='lazygit'
 
 alias pretty='prettier --write "**/*.{ts, tsx, js, jsx}"'
 
 alias tree='erd'
+alias config-source='source ~/.config/shell/load.sh'
 
 alias chrome-debug='sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
 
