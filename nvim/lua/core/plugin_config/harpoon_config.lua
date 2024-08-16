@@ -26,7 +26,7 @@ vim.keymap.set("n", "ml", function()
 end, { desc = "Open harpoon window" })
 
 vim.keymap.set("n", "mm", function()
-	harpoon:list():append()
+	harpoon:list():add()
 end)
 
 vim.keymap.set("n", "<C-e>", function()
