@@ -32,3 +32,13 @@ alias config-source='source ~/.config/shell/load.sh'
 alias chrome-debug='sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
 
 eval "$(zoxide init zsh)"
+
+
+# Path: if work.sh does not exist, create it
+# this is separated to ensure that i don't commit my work.sh file
+workfile=~/.config/shell/functions.d/work.sh
+if [ ! -f $workfile ]; then
+  touch $workfile
+fi
+source $workfile
+
