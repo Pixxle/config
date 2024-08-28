@@ -10,18 +10,9 @@ require("lazy").setup({
 		end,
 	},
 
-	-- statusline
-	--	{
-	--		"hoob3rt/lualine.nvim",
-	--		dependencies = {
-	--			"nvim-tree/nvim-web-devicons",
-	--		},
-	--	},
-	--
-
-	-- AI section
 	---- Copilot
 	---- { "github/copilot.vim" },
+
 	---- Supermaven, Copilot replacement
 	{
 		"supermaven-inc/supermaven-nvim",
@@ -29,6 +20,7 @@ require("lazy").setup({
 			require("supermaven-nvim").setup({})
 		end,
 	},
+
 	-- Configuration and abstraction layer
 	{ "nvim-lua/plenary.nvim" },
 
@@ -49,8 +41,8 @@ require("lazy").setup({
 	{ "declancm/maximize.nvim" },
 
 	-- completion stuff:
-	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
+	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-cmdline" },
 	{ "hrsh7th/nvim-cmp" },
 	{ "saadparwaiz1/cmp_luasnip" },
@@ -78,19 +70,9 @@ require("lazy").setup({
 	-- telescope
 	{ "nvim-telescope/telescope.nvim" },
 
-	-- Quick surround
-	{
-		"kylechui/nvim-surround",
-		version = "*",
-		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup({})
-		end,
-	},
-
 	--neo-tree
 	{
-		"nvim-neo-tree/neo-tree.nvim",
+		"nvimeo-tree/neo-tree.nvim",
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -107,32 +89,11 @@ require("lazy").setup({
 	{ "kdheepak/lazygit.nvim" },
 	{ "f-person/git-blame.nvim" },
 
-	-- Smooth scrolling
-	{
-		"karb94/neoscroll.nvim",
-		config = function()
-			require("neoscroll").setup({})
-		end,
-	},
-
 	-- Multiline
 	{
 		"mg979/vim-visual-multi",
 	},
 
-	--CSV
-
-	{
-		"chrisbra/csv.vim",
-	},
-
 	--Mini: Plugin collection
-	{
-		"echasnovski/mini.nvim",
-		version = false,
-		config = function()
-			require("mini.ai").setup({})
-			require("mini.move").setup({})
-		end,
-	},
+	{ "echasnovski/mini.nvim", version = false },
 })

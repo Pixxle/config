@@ -1,0 +1,7 @@
+require("core.plugin_config.mini_configurations.mini_operators")
+require("core.plugin_config.mini_configurations.mini_statusline")
+require("core.plugin_config.mini_configurations.mini_move")
+require("core.plugin_config.mini_configurations.mini_ai")
+require("core.plugin_config.mini_configurations.mini_animate")
+require("core.plugin_config.mini_configurations.mini_comment")
+require("core.plugin_config.mini_configurations.mini_surround")
