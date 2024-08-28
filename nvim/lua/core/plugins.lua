@@ -117,4 +117,8 @@ require("lazy").setup({
 	{
 		"mg979/vim-visual-multi",
 	},
+
+	{
+		"chrisbra/csv.vim",
+	},
 })
