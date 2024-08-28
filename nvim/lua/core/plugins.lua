@@ -11,12 +11,13 @@ require("lazy").setup({
 	},
 
 	-- statusline
-	{
-		"hoob3rt/lualine.nvim",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-	},
+	--	{
+	--		"hoob3rt/lualine.nvim",
+	--		dependencies = {
+	--			"nvim-tree/nvim-web-devicons",
+	--		},
+	--	},
+	--
 
 	-- AI section
 	---- Copilot
@@ -86,6 +87,7 @@ require("lazy").setup({
 			require("nvim-surround").setup({})
 		end,
 	},
+
 	--neo-tree
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -118,7 +120,19 @@ require("lazy").setup({
 		"mg979/vim-visual-multi",
 	},
 
+	--CSV
+
 	{
 		"chrisbra/csv.vim",
+	},
+
+	--Mini: Plugin collection
+	{
+		"echasnovski/mini.nvim",
+		version = false,
+		config = function()
+			require("mini.ai").setup({})
+			require("mini.move").setup({})
+		end,
 	},
 })
