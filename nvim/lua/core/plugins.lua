@@ -104,4 +104,17 @@ require("lazy").setup({
 	-- github
 	{ "kdheepak/lazygit.nvim" },
 	{ "f-person/git-blame.nvim" },
+
+	-- Smooth scrolling
+	{
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup({})
+		end,
+	},
+
+	-- Multiline
+	{
+		"mg979/vim-visual-multi",
+	},
 })
