@@ -30,4 +30,3 @@ unset -f "function::load"
 
 # Automatically load yabai on startup
 . $HOME/.config/yabai/yabairc
-
