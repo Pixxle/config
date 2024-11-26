@@ -72,7 +72,7 @@ require("lazy").setup({
 
 	--neo-tree
 	{
-		"nvimeo-tree/neo-tree.nvim",
+		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -96,4 +96,9 @@ require("lazy").setup({
 
 	--Mini: Plugin collection
 	{ "echasnovski/mini.nvim", version = false },
+
+	--REST CLIENT
+	{
+		"rest-nvim/rest.nvim",
+	},
 })
