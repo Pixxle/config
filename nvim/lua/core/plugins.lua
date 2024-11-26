@@ -96,9 +96,4 @@ require("lazy").setup({
 
 	--Mini: Plugin collection
 	{ "echasnovski/mini.nvim", version = false },
-
-	--REST CLIENT
-	{
-		"rest-nvim/rest.nvim",
-	},
 })
