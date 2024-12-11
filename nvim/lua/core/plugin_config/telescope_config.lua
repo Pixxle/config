@@ -40,3 +40,11 @@ vim.keymap.set("n", "<leader>s", [[<cmd>lua require('telescope.builtin').grep_st
 -- Telescope LSP get definition
 vim.keymap.set("n", "<leader>h", require("telescope.builtin").lsp_type_definitions)
 vim.keymap.set("n", "<leader>H", require("telescope.builtin").lsp_document_symbols)
+
+-- Search my config files
+vim.keymap.set("n", "<leader>ep", function()
+	local opts = require("telescope.builtin").find_files({
+		prompt_title = "Find config files",
+		cwd = "~/.config",
+	})
+end)
