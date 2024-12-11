@@ -45,6 +45,6 @@ vim.keymap.set("n", "<leader>H", require("telescope.builtin").lsp_document_symbo
 vim.keymap.set("n", "<leader>ep", function()
 	local opts = require("telescope.builtin").find_files({
 		prompt_title = "Find config files",
-		cwd = "~/.config",
+		cwd = "~/.config/nvim",
 	})
 end)
