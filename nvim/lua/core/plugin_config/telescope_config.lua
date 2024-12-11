@@ -24,7 +24,7 @@ require("telescope").setup({
 	},
 })
 
---require("telescope").load_extension("fzf")
+require("telescope").load_extension("fzf")
 
 vim.keymap.set("n", "<leader>b", function()
 	local opts = require("telescope.themes").get_dropdown()
