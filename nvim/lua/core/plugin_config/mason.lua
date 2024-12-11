@@ -6,7 +6,7 @@ local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		"svelte",
-		"tsserver",
+		"ts_ls",
 		"astro",
 		"tailwindcss",
 		"terraformls",
