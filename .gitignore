@@ -10,8 +10,8 @@
 # Folders that are not ignored
 !/nvim/
 !/shell/
-!/skhd/
-!/yabai/
+!/ghostty/
+!/yazi/
 
 
 /shell/functions.d/work.sh

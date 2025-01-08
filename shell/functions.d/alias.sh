@@ -33,6 +33,14 @@ alias chrome-debug='sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\
 
 eval "$(zoxide init zsh)"
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # Path: if work.sh does not exist, create it
 # this is separated to ensure that i don't commit my work.sh file
