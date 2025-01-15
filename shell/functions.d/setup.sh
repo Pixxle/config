@@ -12,7 +12,7 @@ _query_setup() {
   if [ "$ALL_PKG_INSTALLED" = "true" ]; then return 0; fi
 
   echo "We've noticed one or more missing dependencies required to run the called command"
-  echo "Would you like to install Infrasec commonly used tools?[y/n] "
+  echo "Would you like to install commonly used tools?[y/n] "
   while true; do
     read -r yn # I'm using simple read instead of inline read -p since that is flaky in zsh since a few years back
     case $yn in
@@ -27,12 +27,34 @@ done
 # Extend this to not only use brew but detect package manager available
 # This should configure neovim itself and link dotfiles etc automatically also
 install-common-tools() {
-  declare -a DefaultPackages=("jq" "python" "go" "hashicorp/tap/terraform" "git" "fzf" "fd" "tmux" "neovim" "zsh" "ripgrep" "bat" "eza" "homebrew/cask-fonts" "iterm2" "htop" "kubectl" "nvm" "npm" "lazygit" "zoxide" "tokei" "erdtree", "ghostty", "yazi")
-
-  if ! command -v brew > /dev/null; then
-    echo "Cannot find homebrew, installing..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  fi
+  declare -a DefaultPackages=(
+        "jq" 
+        "python"
+        "go"
+        "hashicorp/tap/terraform"
+        "git"
+        "fzf"
+        "fd"
+        "tmux"
+        "neovim"
+        "zsh"
+        "ripgrep"
+        "bat"
+        "eza"
+        "homebrew/cask-fonts"
+        "iterm2"
+        "htop"
+        "kubectl"
+        "nvm"
+        "npm"
+        "lazygit"
+        "zoxide"
+        "tokei"
+        "erdtree"
+        "ghostty"
+        "yazi"
+        "visual-studio-code"
+    )
 
   for pkg in "${DefaultPackages[@]}"; do
     if [[ $pkg == *"tap"* ]]; then
@@ -50,8 +72,6 @@ install-common-tools() {
       fi
     fi
   done
-
-  cp $PWD/dirignore $HOME/
 }
 
 setup-terminal() {
@@ -66,3 +86,4 @@ setup-kubectx() {
     kubectl krew install ctx
     kubectl krew install ns
 }
+
