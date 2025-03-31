@@ -5,6 +5,11 @@ local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 local vim = vim
 
 require("mason-lspconfig").setup({
+	formatters = {
+		black = {
+			prepend_args = { "--fast" },
+		},
+	},
 	ensure_installed = {
 		"svelte",
 		"ts_ls",
@@ -16,6 +21,7 @@ require("mason-lspconfig").setup({
 		"jedi_language_server",
 		"rust_analyzer",
 		"gopls",
+		"black",
 	},
 	automatic_installation = true,
 	handlers = {

@@ -20,3 +20,5 @@ if [ ! -f $gitignoredfile ]; then
 fi
 
 eval "$(zoxide init zsh)"
+
+ZSH_THEME="robbyrussell"
