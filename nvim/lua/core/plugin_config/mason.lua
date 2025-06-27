@@ -54,3 +54,17 @@ require("mason-lspconfig").setup({
 		end,
 	},
 })
+
+vim.diagnostic.config({
+	virtual_text = {
+		severity = { min = vim.diagnostic.severity.HINT },
+	},
+	signs = {
+		severity = { min = vim.diagnostic.severity.HINT },
+	},
+	underline = {
+		severity = { min = vim.diagnostic.severity.HINT },
+	},
+	update_in_insert = false,
+	severity_sort = true,
+})
