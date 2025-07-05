@@ -22,8 +22,3 @@ vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", "<leader>w", "<cmd>:w<CR>")
 vim.keymap.set("n", "<leader>q", "<cmd>:q<CR>")
 vim.keymap.set("n", "<leader>Q", "<cmd>:q!<CR>")
-
-vim.keymap.set("n", "<leader>cc", "<cmd>CopilotChatToggle<CR>")
-
----g.copilot_no_tab_map = true
----g.copilot_assume_mapped = true
