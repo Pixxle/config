@@ -1,4 +1,4 @@
-install_claude_mcp() {
+install_mcp() {
     echo "Installing Claude..."
     # Add your installation commands here
     claude mcp add context7 -- npx -y @upstash/context7-mcp
