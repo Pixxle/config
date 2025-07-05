@@ -95,7 +95,6 @@ require("lazy").setup({
 	{ "nvim-treesitter/nvim-treesitter" },
 
 	-- github
-	{ "kdheepak/lazygit.nvim" },
 	{ "f-person/git-blame.nvim" },
 
 	-- Multiline

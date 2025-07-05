@@ -2,7 +2,6 @@ alias gitll='git log --pretty=format:"%C(yellow)%h%Cred%d\ %Creset%s%Cblue\ [%cn
 alias gitls='git log --pretty=format:"%C(green)%h\ %C(yellow)[%ad]%Cred%d\ %Creset%s%Cblue\ [%cn]" --decorate --date=relative'
 alias gitclean='git branch --merged | /usr/bin/grep -v \* | xargs git branch -D'
 alias gitcleanall='git branch | grep -v "master|main" | xargs git branch -D'
-alias lg='lazygit'
 
 function gdd() {
     local selected=$(git branch | fzf)

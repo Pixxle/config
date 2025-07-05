@@ -49,7 +49,6 @@ install-common-tools() {
         "kubectl"
         "nvm"
         "npm"
-        "lazygit"
         "zoxide"
         "tokei"
         "erdtree"
