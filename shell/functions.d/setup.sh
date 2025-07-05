@@ -48,6 +48,12 @@ install-common-tools() {
         "erdtree"
         "ghostty"
         "cursor"
+        "docker"
+        "docker-compose"
+        "lazydocker"
+        "typescript"
+        "eslint"
+        "prettier"
     )
     
     local -a taps=(

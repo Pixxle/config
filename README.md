@@ -38,9 +38,11 @@ cd $HOME/.config
 ## What's Included
 
 ### Development Tools
-- **Languages**: Python, Rust, Node.js
+- **Languages**: Python, Rust, Node.js, TypeScript
 - **Shell utilities**: fd, ripgrep, bat, fzf, eza, zoxide
 - **Version control**: Git with custom aliases and functions
+- **Containers**: Docker, Docker Compose, LazyDocker
+- **Frontend**: ESLint, Prettier
 - **Kubernetes**: kubectl, k9s
 - **Infrastructure**: Terraform
 

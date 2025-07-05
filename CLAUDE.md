@@ -27,7 +27,7 @@ This is a personal dotfiles configuration repository containing:
 
 ### Configuration Management
 - Automated setup via `install.sh` script
-- Installs development tools via Homebrew including: neovim, fzf, fd, ripgrep, bat, eza, ghostty
+- Installs development tools via Homebrew including: neovim, fzf, fd, ripgrep, bat, eza, ghostty, docker, typescript
 - Automatically backs up existing configurations
 - Links dotfiles and sets up shell integration
 
@@ -51,7 +51,10 @@ The configuration includes setup for:
 - **Neovim**: Configured with LSP, formatters, and modern plugins
 - **Shell utilities**: fd, ripgrep, bat, fzf, eza, zoxide
 - **Terminal**: Ghostty with tmux-like keybindings
-- **Languages**: Go, Python, Node.js/npm, Terraform
+- **Languages**: Python, Rust, Node.js/npm, TypeScript
+- **Containers**: Docker, Docker Compose, LazyDocker
+- **Frontend**: ESLint, Prettier
+- **Infrastructure**: Terraform
 
 ## Key Features
 
