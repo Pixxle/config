@@ -25,26 +25,20 @@ _query_setup() {
     done
 }
 
-# TODO:
-# Extend this to not only use brew but detect package manager available
-# This should configure neovim itself and link dotfiles etc automatically also
+# Install common development tools via Homebrew
 install-common-tools() {
-    declare -a DefaultPackages=(
+    local -a packages=(
         "jq"
         "python"
-        "go"
-        "hashicorp/tap/terraform"
+        "rust"
         "git"
         "fzf"
         "fd"
-        "tmux"
         "neovim"
         "zsh"
         "ripgrep"
         "bat"
         "eza"
-        "homebrew/cask-fonts"
-        "iterm2"
         "htop"
         "kubectl"
         "nvm"
@@ -53,25 +47,59 @@ install-common-tools() {
         "tokei"
         "erdtree"
         "ghostty"
-        "yazi"
-        "visual-studio-code"
         "cursor"
     )
+    
+    local -a taps=(
+        "hashicorp/tap/terraform"
+        "derailed/k9s/k9s"
+    )
+    
+    local -a casks=(
+        "homebrew/cask-fonts"
+    )
+    
+    _install_packages "${packages[@]}"
+    _install_taps "${taps[@]}"
+    _install_casks "${casks[@]}"
+}
 
-    for pkg in "${DefaultPackages[@]}"; do
-        if [[ $pkg == *"tap"* ]]; then
-            pk=$(echo "$pkg" | rev | cut -d "/" -f 1 | rev)
-            tap=$(echo "$pkg" | rev | cut -d "/" -f 1 -f 2 | rev)
-            if ! command -v "$pk" >/dev/null; then
-                echo "$pk not found, installing..."
-                brew tap "$tap"
-                brew install "$pkg"
-            fi
+# Install regular packages
+_install_packages() {
+    local packages=("$@")
+    for pkg in "${packages[@]}"; do
+        if ! command -v "$pkg" >/dev/null 2>&1; then
+            echo "Installing $pkg..."
+            brew install "$pkg" || echo "Failed to install $pkg"
         else
-            if ! command -v "$pkg" >/dev/null; then
-                echo "$pkg not found, installing..."
-                brew install "$pkg"
-            fi
+            echo "$pkg already installed"
         fi
+    done
+}
+
+# Install tap packages
+_install_taps() {
+    local taps=("$@")
+    for tap_pkg in "${taps[@]}"; do
+        local pkg_name=$(basename "$tap_pkg")
+        local tap_name=$(dirname "$tap_pkg")
+        
+        if ! command -v "$pkg_name" >/dev/null 2>&1; then
+            echo "Installing $pkg_name from $tap_name..."
+            brew tap "$tap_name" 2>/dev/null || true
+            brew install "$tap_pkg" || echo "Failed to install $tap_pkg"
+        else
+            echo "$pkg_name already installed"
+        fi
+    done
+}
+
+# Install cask packages
+_install_casks() {
+    local casks=("$@")
+    for cask in "${casks[@]}"; do
+        local cask_name=$(basename "$cask")
+        echo "Installing $cask_name..."
+        brew install --cask "$cask_name" || echo "Failed to install $cask_name"
     done
 }

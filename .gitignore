@@ -12,6 +12,8 @@
 !/shell/
 !/ghostty/
 !/yazi/
+!/install.sh 
+!/CLAUDE.md
 
 
 /shell/functions.d/gitignored.sh
