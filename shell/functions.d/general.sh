@@ -1,6 +1,5 @@
 alias config-source='source ~/.config/shell/load.sh'
 
-alias cd='z'
 alias cat='bat'
 alias l='eza'
 alias ls='eza -la'
