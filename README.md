@@ -19,9 +19,10 @@ That's it. The script will backup your existing config and install everything.
 - Modern shell tools (ripgrep, fd, bat, etc.)
 
 **Terminal setup:**
+- Oh My Zsh with custom configuration
 - Ghostty with tmux-style keybindings
 - Shell functions for common tasks
-- Aliases for better defaults
+- Aliases for better defaults (git aliases disabled from Oh My Zsh)
 
 **Apps:**
 - Cursor editor
