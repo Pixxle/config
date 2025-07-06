@@ -15,9 +15,15 @@ function gdd() {
 if alias gd >/dev/null 2>&1; then
     unalias gd
 fi
+
 function gd() {
-  preview="git diff $@ --color=always -- {-1}"
-  git diff $@ --name-only | fzf -m --ansi --preview $preview
+  git -c color.ui=always diff --name-only |
+  fzf --multi \
+    --preview 'git diff --color=always -- {-1}' \
+    --bind 'ctrl-a:execute(git add {+})+reload(git diff --name-only)' \
+    --bind 'ctrl-r:execute(git restore --staged {+})+reload(git diff --name-only)' \
+    --bind 'ctrl-d:execute(git restore {+})+reload(git diff --name-only)' \
+    --bind 'enter:accept'
 }
 
 if alias gs >/dev/null 2>&1; then

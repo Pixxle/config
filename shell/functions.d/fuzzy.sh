@@ -1,10 +1,4 @@
 
-# Fuzzy vim finder
-alias vl='fd --type f --hidden --exclude .git --exclude node_modules | fzf-tmux -p | xargs nvim'
-
-# Fuzzy cd finder
-alias cl='cd $(find . -t directory --ignore-file $HOME/.config/shell/dirignore | fzf)'
-
 # Fuzzy history search
 fzf_history() {
   local selected
@@ -17,5 +11,4 @@ fzf_history() {
 }
 zle -N fzf_history
 bindkey '^R' fzf_history
-
 
