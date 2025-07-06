@@ -20,4 +20,5 @@
 
 # Ignore user-specific files
 /shell/functions.d/gitignored.sh
+/shell/env.sh
 
