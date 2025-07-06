@@ -90,6 +90,22 @@ setup_dotfiles() {
     log_success "Dotfiles configured"
 }
 
+# Setup Claude Code configuration
+setup_claude() {
+    log_info "Setting up Claude Code configuration..."
+    
+    # Create claude directory structure
+    mkdir -p "$HOME/claude/.claude"
+    
+    # Copy default CLAUDE.md if it doesn't exist
+    if [ ! -f "$HOME/claude/.claude/CLAUDE.md" ]; then
+        cp "$CONFIG_DIR/claude/.claude/CLAUDE.md" "$HOME/claude/.claude/CLAUDE.md"
+        log_success "Created default Claude Code configuration"
+    else
+        log_success "Claude Code configuration already exists"
+    fi
+}
+
 # Install and setup zsh with Oh My Zsh
 setup_zsh() {
     log_info "Setting up zsh and Oh My Zsh..."
@@ -225,6 +241,7 @@ main() {
     setup_config_repo
     install_packages
     setup_dotfiles
+    setup_claude
     setup_shell
     setup_neovim
     

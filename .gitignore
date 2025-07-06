@@ -6,14 +6,18 @@
 !/README.md
 !/LICENSE
 !/tmux/tmux.conf
+!/install.sh 
+!/CLAUDE.md
 
 # Folders that are not ignored
 !/nvim/
 !/shell/
 !/ghostty/
 !/yazi/
-!/install.sh 
-!/CLAUDE.md
+!/claude/
+!/claude/.claude/
+!/claude/.claude/*
 
-
+# Ignore user-specific files
 /shell/functions.d/gitignored.sh
+
