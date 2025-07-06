@@ -79,17 +79,22 @@ $git_status
 Git Diff:
 $git_diff
 
-Respond with only the commit message, no explanation or additional text."
+The first line should contain the type of change, such as feature, test, chore etc.
+Following the second line should be a summary of changes performed.
+Following the summary should be a list with all changes, one or more list items per file.
+The list should specify what file was modified and what changes where made.
+Respond with only the commit message, no explanation or additional text.
+"
     
     # Call ChatGPT API
     local commit_message=$(curl -s -X POST "https://api.openai.com/v1/chat/completions" \
         -H "Content-Type: application/json" \
         -H "Authorization: Bearer $OPENAI_API_KEY" \
         -d "{
-            \"model\": \"gpt-3.5-turbo\",
+            \"model\": \"gpt-4.1-nano\",
             \"messages\": [{\"role\": \"user\", \"content\": $(echo "$prompt" | jq -R -s .)}],
-            \"max_tokens\": 100,
-            \"temperature\": 0.3
+            \"max_tokens\": 4096,
+            \"temperature\": 0.7
         }" | jq -r '.choices[0].message.content // empty')
     
     # Check if API call was successful
