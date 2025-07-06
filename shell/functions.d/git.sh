@@ -46,14 +46,9 @@ if alias gc >/dev/null 2>&1; then
 fi
 
 function gc() {
-    # Check if there are any changes to commit
-    if ! git diff --cached --quiet; then
-        echo "You have staged changes. Please commit them first or unstage them."
-        return 1
-    fi
-    
-    if git diff --quiet && git diff --cached --quiet; then
-        echo "No changes to commit."
+    # Check if there are staged changes to commit
+    if git diff --cached --quiet; then
+        echo "No staged changes to commit. Please stage your changes first with 'git add'."
         return 1
     fi
     
@@ -66,8 +61,8 @@ function gc() {
     
     echo "Generating commit message with ChatGPT..."
     
-    # Get git diff and status for context
-    local git_diff=$(git diff --no-color)
+    # Get git diff and status for context (staged changes only)
+    local git_diff=$(git diff --cached --no-color)
     local git_status=$(git status --porcelain)
     
     # Prepare the prompt for ChatGPT
@@ -107,8 +102,21 @@ Respond with only the commit message, no explanation or additional text.
     local temp_file=$(mktemp)
     echo "$commit_message" > "$temp_file"
     
+    # Store original message and file timestamp for comparison
+    local original_message="$commit_message"
+    local original_timestamp=$(stat -f "%m" "$temp_file")
+    
     # Open vim to edit the commit message
     vim "$temp_file"
+    local vim_exit_code=$?
+    
+    # Check if vim exited abnormally or file wasn't modified
+    local new_timestamp=$(stat -f "%m" "$temp_file")
+    if [[ $vim_exit_code -ne 0 ]] || [[ $original_timestamp -eq $new_timestamp ]]; then
+        echo "Commit aborted: vim exited without saving"
+        rm "$temp_file"
+        return 1
+    fi
     
     # Read the edited commit message
     local edited_message=$(cat "$temp_file")
@@ -120,8 +128,7 @@ Respond with only the commit message, no explanation or additional text.
         return 1
     fi
     
-    # Add all changes and commit
-    git add .
+    # Commit staged changes
     git commit -m "$edited_message"
     
     echo "Committed with message: $edited_message"
